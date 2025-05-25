@@ -29,11 +29,6 @@ public class CreateUserTest {
                 .statusCode(200)
                 .body("message", equalTo(String.valueOf(expectedMessage)));
 
-        // ⏳ Добавим паузу
-        Thread.sleep(1000);
-
-        api.deleteUser("Kolya")
-                .statusCode(200);
     }
 
 
