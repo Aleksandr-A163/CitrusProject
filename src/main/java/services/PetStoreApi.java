@@ -4,7 +4,7 @@ import dto.NewUserDTO;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-import io.restassured.specification.ResponseSpecification;
+
 
 import static io.restassured.RestAssured.given;
 

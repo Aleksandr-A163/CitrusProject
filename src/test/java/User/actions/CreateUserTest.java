@@ -1,11 +1,9 @@
 package User.actions;
 
 import dto.NewUserDTO;
-import io.restassured.module.jsv.JsonSchemaValidator;
-import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
 import services.PetStoreApi;
-import static io.restassured.RestAssured.given;
+
 
 
 import static org.hamcrest.Matchers.equalTo;
@@ -13,7 +11,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class CreateUserTest {
 
     @Test
-    void createUser() throws InterruptedException {
+    void createUser() {
         long expectedMessage = 408L;
         PetStoreApi api = new PetStoreApi();
 
