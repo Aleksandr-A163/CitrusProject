@@ -1,0 +1,26 @@
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+# Игнорировать всё
+*
+
+# Но не src/ и всё внутри неё
+!src/
+!src/**
+!media/
+!media/**
+
+# Не игнорировать файл README.md
+!README.md
+
+# Не игнорировать Gradle скрипты
+!build.gradle
+!settings.gradle
+
+# Игнорировать папку .idea
+.idea/
