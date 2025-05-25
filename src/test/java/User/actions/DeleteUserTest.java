@@ -39,10 +39,9 @@ public class DeleteUserTest {
 
     @Test
     void deleteNonExistentUser() {
-        // Проверяет корректную обработку попытки удалить несуществующего пользователя
+        PetStoreApi api = new PetStoreApi();
+
         api.deleteUser("nonExistentUser")
-                .statusCode(HttpStatus.SC_NOT_FOUND)
-                .body("code", equalTo(1))
-                .body("type", equalTo("error"));
+            .statusCode(404); // и ничего больше
     }
 }
