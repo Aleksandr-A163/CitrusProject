@@ -10,6 +10,11 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class CreateUserTest {
 
+    /**
+     * Проверяет успешное создание нового пользователя с заданным ID.
+     * Ожидается, что API вернёт код 200 и в теле ответа message будет содержать переданный ID.
+     */
+
     @Test
     void createUser() {
         long expectedMessage = 408L;

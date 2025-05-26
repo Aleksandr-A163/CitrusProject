@@ -14,6 +14,10 @@ public class DeleteUserTest {
     private PetStoreApi api;
     private final String username = "UserToDelete";
 
+    /**
+     * Создаёт пользователя с именем UserToDelete перед каждым тестом.
+     */
+
     @BeforeEach
     void setUp() {
         api = new PetStoreApi();
@@ -28,6 +32,11 @@ public class DeleteUserTest {
 
     }
 
+    /**
+     * Проверяет, что ранее созданный пользователь успешно удаляется.
+     * Ожидается: статус 200 и тело ответа содержит code=200 и message=username.
+     */
+
     @Test
     void deleteExistingUser() {
         // Проверяет успешное удаление ранее созданного пользователя
@@ -36,6 +45,10 @@ public class DeleteUserTest {
                 .body("code", equalTo(200))
                 .body("message", equalTo(username));
     }
+
+    /**
+     * Проверяет, что при попытке удалить несуществующего пользователя сервер возвращает 404.
+     */
 
     @Test
     void deleteNonExistentUser() {

@@ -43,4 +43,15 @@ public class PetStoreApi {
                 .log().all();
     }
 
+    public ValidatableResponse getUser(String username) {
+        return given(spec)
+                .basePath("/user/{username}")
+                .pathParam("username", username)
+                .log().all()
+                .when()
+                .get()
+                .then()
+                .log().all();
+    }
+
 }
