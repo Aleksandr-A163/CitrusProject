@@ -1,5 +1,8 @@
 
 plugins {
+// SpotBugs (линтер)
+id 'com.github.spotbugs' version '5.0.14'
+
     id 'java'
 }
 
@@ -30,4 +33,11 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+spotbugs {
+    ignoreFailures = false
+    showProgress = true
+    effort = 'max'
+    reportLevel = 'low'
 }
