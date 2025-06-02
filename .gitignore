@@ -3,6 +3,9 @@
 .gradle/
 build/
 out/
+gradlew
+gradlew.bat
+gradle/wrapper/
 
 # IntelliJ IDEA
 .idea/
