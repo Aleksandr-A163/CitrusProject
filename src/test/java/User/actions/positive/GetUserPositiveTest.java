@@ -1,4 +1,4 @@
-package User.actions;
+package User.actions.positive;
 
 import dto.NewUserDTO;
 import org.apache.http.HttpStatus;
@@ -9,7 +9,7 @@ import services.PetStoreApi;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class GetUserTest {
+public class GetUserPositiveTest {
 
     private PetStoreApi api;
     private final String username = "ExistingUser";
@@ -43,19 +43,12 @@ public class GetUserTest {
     void getExistingUser() {
         // Проверяет, что можно получить ранее созданного пользователя
         api.getUser(username)
-            .statusCode(HttpStatus.SC_OK)
-            .body("username", equalTo(username))
-            .body("id", notNullValue());
+                .statusCode(HttpStatus.SC_OK)
+                .body("username", equalTo(username))
+                .body("id", notNullValue());
     }
 
-    /**
-     * Проверяет, что попытка получить несуществующего пользователя возвращает 404.
-     */
-
-    @Test
-    void getNonExistentUser() {
-        // Проверяет, что получение несуществующего пользователя возвращает 404
-        api.getUser("ghost_user_404")
-            .statusCode(HttpStatus.SC_NOT_FOUND);
-    }
 }
+
+
+    

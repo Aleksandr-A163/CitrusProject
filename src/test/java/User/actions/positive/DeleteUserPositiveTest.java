@@ -1,5 +1,4 @@
-
-package User.actions;
+package User.actions.positive;
 
 import dto.NewUserDTO;
 import org.apache.http.HttpStatus;
@@ -9,7 +8,7 @@ import services.PetStoreApi;
 
 import static org.hamcrest.Matchers.equalTo;
 
-public class DeleteUserTest {
+public class DeleteUserPositiveTest {
 
     private PetStoreApi api;
     private final String username = "UserToDelete";
@@ -45,16 +44,9 @@ public class DeleteUserTest {
                 .body("code", equalTo(200))
                 .body("message", equalTo(username));
     }
-
+}
     /**
      * Проверяет, что при попытке удалить несуществующего пользователя сервер возвращает 404.
      */
 
-    @Test
-    void deleteNonExistentUser() {
-        PetStoreApi api = new PetStoreApi();
-
-        api.deleteUser("nonExistentUser")
-            .statusCode(404); // и ничего больше
-    }
-}
+    
