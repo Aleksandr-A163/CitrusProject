@@ -11,7 +11,7 @@
 <a href="https://www.java.com/"><img width="10%" title="Java" src="media/logo/Java.svg"></a>
 <a href="https://gradle.org/"><img width="10%" title="Gradle" src="media/logo/Gradle.svg"></a>
 <a href="https://junit.org/junit5/"><img width="10%" title="JUnit5" src="media/logo/JUnit5.svg"></a>
-<a href="https://rest-assured.io/"><img width="10%" title="RestAssured" src="media/logo/Citrus.svg"></a>
+<a href="https://citrusframework.org/"><img width="10%" title="Citrus" src="media/logo/Citrus.svg"></a>
 </p>
 
 <div align="center">
