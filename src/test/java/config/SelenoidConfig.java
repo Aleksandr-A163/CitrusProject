@@ -20,7 +20,7 @@ public class SelenoidConfig {
         capabilities.setVersion("121.0");
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
-        return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+        return new RemoteWebDriver(new URL("http://host.docker.internal:4444/wd/hub"), capabilities);
     }
 
     @Bean(name = "chromeMobileDriver")
@@ -32,6 +32,6 @@ public class SelenoidConfig {
         mobileCaps.setCapability("goog:chromeOptions", Map.of(
                 "mobileEmulation", Map.of("deviceName", "iPhone X")
         ));
-        return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), mobileCaps);
+        return new RemoteWebDriver(new URL("http://host.docker.internal:4444/wd/hub"), mobileCaps);
     }
 }

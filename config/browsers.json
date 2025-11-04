@@ -1,0 +1,46 @@
+{
+  "chrome": {
+    "default": "121.0",
+    "versions": {
+      "121.0": {
+        "image": "selenoid/vnc:chrome_121.0",
+        "port": "4444",
+        "path": "/",
+        "tmpfs": {"/tmp": "size=512m"}
+      }
+    }
+  },
+  "firefox": {
+    "default": "122.0",
+    "versions": {
+      "122.0": {
+        "image": "selenoid/vnc:firefox_122.0",
+        "port": "4444",
+        "path": "/",
+        "tmpfs": {"/tmp": "size=512m"}
+      }
+    }
+  },
+  "opera": {
+    "default": "107.0",
+    "versions": {
+      "107.0": {
+        "image": "selenoid/vnc:opera_107.0",
+        "port": "4444",
+        "path": "/",
+        "tmpfs": {"/tmp": "size=512m"}
+      }
+    }
+  },
+  "edge": {
+    "default": "121.0",
+    "versions": {
+      "121.0": {
+        "image": "browsers/edge:121.0",
+        "port": "4444",
+        "path": "/",
+        "tmpfs": {"/tmp": "size=512m"}
+      }
+    }
+  }
+}
