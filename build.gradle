@@ -29,6 +29,9 @@ dependencies {
 
     // JUnit
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+
+    // Selenoid integration
+    testImplementation 'org.citrusframework:selenium:3.3.0'
 }
 
 test {
@@ -41,3 +44,5 @@ spotbugs {
     effort = 'max'
     reportLevel = 'low'
 }
+
+
